@@ -128,8 +128,8 @@ const routes: Routes = [
     // component: MasterPageComponent,
     component: HomePageComponent,
     children: [
-      { path: '', component: IndexComponent },
-      { path: 'home', component: HomeComponent },
+      { path: '', component: HomeComponent },
+      { path: 'home', component: IndexComponent },
       { path: 'account-messages', component: AccountMessagesComponent },
       { path: 'account-members', component: AccountMembersComponent },
       { path: 'account-payments', component: AccountPaymentsComponent },

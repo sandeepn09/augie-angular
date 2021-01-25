@@ -3,12 +3,12 @@
     <div class="container">
       <!-- Logo container-->
       <div>
-        <a class="logo" routerLink="/index" *ngIf="navClass !== 'nav-light'">
+        <a class="logo" routerLink="/" *ngIf="navClass !== 'nav-light'">
           <img src="assets/images/Purple.png" class="l-dark" height="24" alt="">
           <img src="assets/images/Purple.png" class="l-light" height="24" alt="">
           <span class="nav-link-ref">augie</span>
         </a>
-        <a class="logo" routerLink="/index" *ngIf="navClass === 'nav-light'">
+        <a class="logo" routerLink="/" *ngIf="navClass === 'nav-light'">
           
           <img src="assets/images/Green.png" class="l-light" style="padding: 2px;background-color: aliceblue; border-radius: 50%; margin-right: 10px;" height="44" alt="">
           <span class="nav-link-ref" style="color: #fff">augie</span>
@@ -34,9 +34,9 @@
       <div id="navigation">
         <!-- Navigation Menu-->
         <ul class="navigation-menu" [class]="navClass">
-          <li><a routerLink="/home" class="nav-link-ref">Home</a></li>
+          <li><a routerLink="/" class="nav-link-ref">Home</a></li>
           <li><a routerLink="/wl-signup" class="nav-link-ref">Sign up</a></li>
-          <li><a [ngxScrollTo]="'#faq'" class="nav-link-ref">FAQs</a></li>
+          <li><a href="javascript:void(0)" [ngxScrollTo]="'#faq'" class="nav-link-ref">FAQs</a></li>
            
         </ul>
         <!--end navigation menu-->
