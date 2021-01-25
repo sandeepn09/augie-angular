@@ -70,6 +70,19 @@ export class RefFriendComponent implements OnInit {
 
       this.router.navigate(["/wl-confirm"]);
       // this.router.navigate(['/wl-confirm'], { queryParams: { 'refcode': this.referralRequest.referralToken } });
+    },
+    error => {
+      this.appResponse = {
+        code: 0,
+        description: "An error occured while processing your request",
+        message: "Processing Error",
+        result: "ERROR",
+        details: {},
+      };
+
+      this.userService.setData(this.appResponse);
+
+      this.router.navigate(["/wl-confirm"]);
     });
   }
 }

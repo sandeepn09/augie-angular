@@ -56,6 +56,19 @@ export class WlSignupComponent implements OnInit {
       this.userService.setData(this.appResponse);
 
       this.router.navigate(["/wl-confirm"]);
+    },
+    error => {
+      this.appResponse = {
+        code: 0,
+        description: "An error occured while processing your request",
+        message: "Processing Error",
+        result: "ERROR",
+        details: {},
+      };
+
+      this.userService.setData(this.appResponse);
+
+      this.router.navigate(["/wl-confirm"]);
     });
   }
 }
