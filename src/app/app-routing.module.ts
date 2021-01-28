@@ -228,6 +228,8 @@ const routes: Routes = [
       { path: 'page-blog-detail-two', component: PageBlogDetailTwoComponent },
       { path: '#', component: SwitcherComponent },
       { path: 'wl-confirm', component: ConfirmComponent },
+      { path: 'wl-signup', component: WlSignupComponent },
+      { path: 'raf', component: RefFriendComponent },
     ]
   },
 
@@ -250,9 +252,6 @@ const routes: Routes = [
   { path: 'email-confirmation', component: EmailConfirmationComponent },
   { path: 'email-invoice', component: EmailInvoiceComponent },
   { path: 'email-password-reset', component: EmailPasswordResetComponent },
-  { path: 'wl-signup', component: WlSignupComponent },
-  { path: 'raf', component: RefFriendComponent },
-  
 ];
 
 @NgModule({

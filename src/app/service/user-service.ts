@@ -19,24 +19,29 @@ import { Injectable } from "@angular/core";
 })
 export class UserService {
   userSignupUrl =
-    "https://augie-service-load-balancer-1748364356.us-east-2.elb.amazonaws.com/signup";
+    "https://augiealb.augie.app/signup";
   referUrl =
-    "https://augie-service-load-balancer-1748364356.us-east-2.elb.amazonaws.com/refer";
+    "https://augiealb.augie.app/refer";
   // userSignupUrl = "http://ec2-13-59-125-34.us-east-2.compute.amazonaws.com:8085/signup";
   //referUrl =
   // "http://ec2-13-59-125-34.us-east-2.compute.amazonaws.com:8085/refer";
   data: AppResponse;
 
+  headers = new HttpHeaders()
+  .set('content-type', 'application/json')
+  .set('Access-Control-Allow-Origin', '*')
+  .set('rejectUnauthorized', 'false');
+
   constructor(private http: HttpClient) {}
 
   public signup(signupRequest: SignupRequest): Observable<AppResponse> {
     console.log("signupRequest in service", signupRequest);
-    return this.http.post<AppResponse>(this.userSignupUrl, signupRequest);
+    return this.http.post<AppResponse>(this.userSignupUrl, signupRequest, {headers: this.headers});
   }
 
   public refer(referralRequest: ReferralRequest): Observable<AppResponse> {
     console.log("signupRequest in service", referralRequest);
-    return this.http.post<AppResponse>(this.referUrl, referralRequest);
+    return this.http.post<AppResponse>(this.referUrl, referralRequest, {headers: this.headers});
   }
 
   private handleError(error: HttpErrorResponse): any {
