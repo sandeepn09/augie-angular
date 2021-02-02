@@ -121,6 +121,8 @@ import { HomePageComponent } from './core/components/home-page/home-page.compone
 import { WlSignupComponent } from './auth/wl-signup/wl-signup.component';
 import { RefFriendComponent } from './auth/ref-friend/ref-friend.component';
 import { ConfirmComponent } from './core/components/confirm/confirm.component';
+import { MinHomeComponent } from './core/components/min-home/min-home.component';
+import { AugieFaqComponent } from './core/components/augie-faq/augie-faq.component';
 
 const routes: Routes = [
   {
@@ -227,9 +229,19 @@ const routes: Routes = [
       { path: 'widget', component: WidgetComponent },
       { path: 'page-blog-detail-two', component: PageBlogDetailTwoComponent },
       { path: '#', component: SwitcherComponent },
-      { path: 'wl-confirm', component: ConfirmComponent },
+      { path: 'faq', component: AugieFaqComponent },
+      { path: 'confirmation', component: ConfirmComponent },
       { path: 'wl-signup', component: WlSignupComponent },
-      { path: 'raf', component: RefFriendComponent },
+      { path: 'signup', component: RefFriendComponent },
+    ]
+  },
+  {
+    path: 'forms',
+    component: MinHomeComponent,
+    children: [
+      { path: 'confirmationv1', component: ConfirmComponent },
+      { path: 'wl-signupv2', component: WlSignupComponent },
+      { path: 'signupv3', component: RefFriendComponent },
     ]
   },
 

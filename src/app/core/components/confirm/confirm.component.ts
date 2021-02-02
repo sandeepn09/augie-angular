@@ -31,7 +31,7 @@ export class ConfirmComponent implements OnInit {
   retryReferral() {
     console.log("Yes Refcode", this.messageDetails.details.refcode);
 
-    this.router.navigate(["/raf"], {
+    this.router.navigate(["/signup"], {
       queryParams: { refcode: this.messageDetails.details.refcode },
     });
   }

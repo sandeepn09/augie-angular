@@ -15,8 +15,8 @@
             <button (click)="retryReferral()" type="submit" class="btn btn-primary">Retry Referral</button>
         </div>
 
-            <div *ngIf="messageDetails.code == 1007"  class="mt-4 pt-2">
-                <button routerLink="/wl-signup" type="submit" class="btn btn-primary">Retry Signup</button>
+            <div *ngIf="messageDetails.code == 1007 || messageDetails.code == 1010"  class="mt-4 pt-2">
+                <button routerLink="/signup" type="submit" class="btn btn-primary">Retry Signup</button>
             </div>
 
             <div *ngIf="messageDetails.code == 1006" class="mt-4 pt-2">

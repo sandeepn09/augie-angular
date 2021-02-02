@@ -53,6 +53,7 @@ export class RefFriendComponent implements OnInit {
     this.referralRequest.email = form.value.email;
     this.referralRequest.firstName = form.value.firstName;
     this.referralRequest.lastName = form.value.lastName;
+    this.referralRequest.referralToken = form.value.refcode;
     
     this.success = true;
     console.log("referralRequest: ", this.referralRequest);
@@ -68,7 +69,7 @@ export class RefFriendComponent implements OnInit {
 
       this.userService.setData(this.appResponse);
 
-      this.router.navigate(["/wl-confirm"]);
+      this.router.navigate(["/confirmation"]);
       // this.router.navigate(['/wl-confirm'], { queryParams: { 'refcode': this.referralRequest.referralToken } });
     },
     error => {
@@ -82,7 +83,7 @@ export class RefFriendComponent implements OnInit {
 
       this.userService.setData(this.appResponse);
 
-      this.router.navigate(["/wl-confirm"]);
+      this.router.navigate(["/confirmation"]);
     });
   }
 }

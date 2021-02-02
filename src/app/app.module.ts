@@ -152,6 +152,9 @@ import { AugieFooterComponent } from './shared/augie-footer/augie-footer.compone
 import { UserService } from './service/user-service';
 import { Data } from './models/user-models';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { MinHeaderComponent } from './shared/min-header/min-header.component';
+import { MinHomeComponent } from './core/components/min-home/min-home.component';
+import { AugieFaqComponent } from './core/components/augie-faq/augie-faq.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -287,7 +290,10 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     WlSignupComponent,
     RefFriendComponent,
     ConfirmComponent,
-    AugieFooterComponent
+    AugieFooterComponent,
+    MinHeaderComponent,
+    MinHomeComponent,
+    AugieFaqComponent
   ],
   imports: [
     BrowserModule,
