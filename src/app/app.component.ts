@@ -1,13 +1,15 @@
-import { Component } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Component } from "@angular/core";
+import { Router, NavigationEnd } from "@angular/router";
+
+declare var gtag;
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  title = 'landrick-angular';
+  title = "landrick-angular";
 
   constructor(private router: Router) {
     /**
@@ -15,7 +17,10 @@ export class AppComponent {
      */
     router.events.forEach((event) => {
       if (event instanceof NavigationEnd) {
-        window['Unicons']['refresh']();
+        window["Unicons"]["refresh"]();
+        gtag("config", "G-0KQH9FMPYB", {
+          page_path: event.urlAfterRedirects,
+        });
       }
     });
   }
