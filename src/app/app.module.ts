@@ -155,6 +155,11 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MinHeaderComponent } from './shared/min-header/min-header.component';
 import { MinHomeComponent } from './core/components/min-home/min-home.component';
 import { AugieFaqComponent } from './core/components/augie-faq/augie-faq.component';
+import { SignupsComponent } from './admin/signups/signups.component';
+import { AdminPageComponent } from './admin/admin-page/admin-page.component';
+import { OveviewComponent } from './admin/oveview/oveview.component';
+import { SettingComponent } from './admin/setting/setting.component';
+import { AddSettingComponent } from './admin/add-setting/add-setting.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -293,7 +298,12 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     AugieFooterComponent,
     MinHeaderComponent,
     MinHomeComponent,
-    AugieFaqComponent
+    AugieFaqComponent,
+    SignupsComponent,
+    AdminPageComponent,
+    OveviewComponent,
+    SettingComponent,
+    AddSettingComponent
   ],
   imports: [
     BrowserModule,

@@ -21,6 +21,32 @@ export class AppResponse {
   details: any;
 }
 
+export class SignupDetails {
+  id: number;
+  firstName: string;
+  lastName: string;
+  email: string;
+  referralToken: string;
+  emailVerified: string;
+  referredByToken: string;
+  referredByEmail: string;
+  createDateTime: string;
+  updateDateTime: string;
+}
+
+export class SignupStats {
+  totalSignups:number;
+  recentSignups:number;
+  referralCount:number;
+}
+
+export class AppSettings {
+  settingKey:string;
+  settingValue:string;
+  settingDescription:string;
+  updateDateTime:string;
+}
+
 @Injectable({
   providedIn: "root",
 })

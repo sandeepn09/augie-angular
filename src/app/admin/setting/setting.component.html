@@ -1,0 +1,39 @@
+<!-- Table Start -->
+<div class="col mt-4 pt-2" id="tables">
+    <div class="component-wrapper rounded shadow">
+      <div class="p-4 border-bottom d-flex" style="justify-content: space-between;">
+        <h4 class="title mb-0"> Settings </h4>
+        <a href="/forms/add-setting" class="btn btn-primary"> Add Setting </a>
+      </div>
+
+      <div class="p-4">
+        <div class="table-responsive bg-white shadow rounded">
+          <table class="table mb-0 table-center">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Setting</th>
+                <th scope="col">Key</th>
+                <th scope="col">Value</th>
+                <th scope="col">Last Updated</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let setting of appSettings; let i = index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{setting.settingDescription}}</td>
+                <td>{{setting.settingKey}}</td>
+                <td>{{setting.settingValue}}</td>
+                <td>{{setting.updateDateTime}}</td>
+                <td><a href="#" class="btn btn-primary"> Edit </a></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end col-->
+  <!-- Table End -->

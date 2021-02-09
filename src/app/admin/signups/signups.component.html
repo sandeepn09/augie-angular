@@ -1,0 +1,47 @@
+<!-- Table Start -->
+<div class="col mt-4 pt-2" id="tables">
+    <div class="component-wrapper rounded shadow">
+      <div class="p-4 border-bottom d-flex" style="justify-content: space-between;">
+        <h4 class="title mb-0"> Signups </h4>
+        <ul class="pagination mb-0">
+            <li class="page-item"><a class="page-link" href="javascript:void(0)" aria-label="Previous">Prev</a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#" aria-label="Next">Next</a></li>
+         </ul>
+      </div>
+
+      <div class="p-4">
+        <div class="table-responsive bg-white shadow rounded">
+          <table class="table mb-0 table-center">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Ref-Code</th>
+                <th scope="col">Referred by</th>
+                <th scope="col">Signup Date</th>
+                <th scope="col">Referral Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of signups; let i = index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{user.firstName}} {{user.lastName}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.referralToken}}</td>
+                <td>{{user.referredByEmail}}</td>
+                <td>{{user.createDateTime}}</td>
+                <td><a href="#" class="btn btn-primary"> Resend </a></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end col-->
+  <!-- Table End -->

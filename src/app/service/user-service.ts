@@ -8,6 +8,7 @@ import {
   SignupRequest,
   AppResponse,
   ReferralRequest,
+  SignupDetails
 } from "../models/user-models";
 import { Observable, throwError } from "rxjs";
 import { catchError } from "rxjs/internal/operators";
@@ -20,6 +21,10 @@ import { Injectable } from "@angular/core";
 export class UserService {
   userSignupUrl =
     "https://augiealb.augie.app/v2/signup";
+
+  signupsUrl =
+    "https://augiealb.augie.app/wl-signups";
+  
   referUrl =
     "https://augiealb.augie.app/refer";
   // userSignupUrl = "http://ec2-13-59-125-34.us-east-2.compute.amazonaws.com:8085/signup";
@@ -42,6 +47,11 @@ export class UserService {
   public refer(referralRequest: ReferralRequest): Observable<AppResponse> {
     console.log("signupRequest in service", referralRequest);
     return this.http.post<AppResponse>(this.userSignupUrl, referralRequest, {headers: this.headers});
+  }
+
+  public getAllSignups(): Observable<SignupDetails[]> {
+    console.log("Fetching all signups");
+    return this.http.get<SignupDetails[]>(this.signupsUrl, {headers: this.headers});
   }
 
   private handleError(error: HttpErrorResponse): any {
