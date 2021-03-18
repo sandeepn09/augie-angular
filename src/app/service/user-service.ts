@@ -1,4 +1,3 @@
-import { HttpClientModule } from "@angular/common/http";
 import {
   HttpClient,
   HttpHeaders,
@@ -8,7 +7,8 @@ import {
   SignupRequest,
   AppResponse,
   ReferralRequest,
-  SignupDetails
+  SignupDetails,
+  UserInquiry
 } from "../models/user-models";
 import { Observable, throwError } from "rxjs";
 import { catchError } from "rxjs/internal/operators";
@@ -27,6 +27,9 @@ export class UserService {
   
   referUrl =
     "https://augiealb.augie.app/refer";
+
+  inquiryUrl =
+    "https://augiealb.augie.app/user-inquiry";
   // userSignupUrl = "http://ec2-13-59-125-34.us-east-2.compute.amazonaws.com:8085/signup";
   //referUrl =
   // "http://ec2-13-59-125-34.us-east-2.compute.amazonaws.com:8085/refer";
@@ -63,6 +66,11 @@ export class UserService {
       );
     }
     return throwError("Something bad happened; please try again later.");
+  }
+
+  public sendMessage(userInquiry: UserInquiry): Observable<AppResponse> {
+    console.log("userInquiry in service", userInquiry);
+    return this.http.post<AppResponse>(this.inquiryUrl, userInquiry, {headers: this.headers});
   }
 
   setData(respData: AppResponse) {

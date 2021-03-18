@@ -47,6 +47,13 @@ export class AppSettings {
   updateDateTime:string;
 }
 
+export class UserInquiry {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
+
 @Injectable({
   providedIn: "root",
 })

@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -160,6 +160,7 @@ import { AdminPageComponent } from './admin/admin-page/admin-page.component';
 import { OveviewComponent } from './admin/oveview/oveview.component';
 import { SettingComponent } from './admin/setting/setting.component';
 import { AddSettingComponent } from './admin/add-setting/add-setting.component';
+import { ContactUsComponent } from './core/components/contact-us/contact-us.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -303,7 +304,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     AdminPageComponent,
     OveviewComponent,
     SettingComponent,
-    AddSettingComponent
+    AddSettingComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
@@ -318,6 +320,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     NgbModule,
     NgbNavModule,
     FormsModule,
+    ReactiveFormsModule,
     SwiperModule,
     NgxTypedJsModule,
     FlatpickrModule.forRoot(),

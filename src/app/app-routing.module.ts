@@ -126,6 +126,7 @@ import { AugieFaqComponent } from "./core/components/augie-faq/augie-faq.compone
 import { SignupsComponent } from "./admin/signups/signups.component";
 import { AdminPageComponent } from "./admin/admin-page/admin-page.component";
 import { AddSettingComponent } from "./admin/add-setting/add-setting.component";
+import { ContactUsComponent } from './core/components/contact-us/contact-us.component';
 
 const routes: Routes = [
   {
@@ -254,6 +255,7 @@ const routes: Routes = [
       { path: "confirmation", component: ConfirmComponent },
       { path: "wl-signup", component: WlSignupComponent },
       { path: "signup", component: RefFriendComponent },
+      { path: "contact-us", component: ContactUsComponent}
     ],
   },
   {
