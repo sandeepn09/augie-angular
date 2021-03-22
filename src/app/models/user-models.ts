@@ -34,6 +34,11 @@ export class SignupDetails {
   updateDateTime: string;
 }
 
+export class SignupContent {
+  content: SignupDetails[];
+  totalPages: number;
+}
+
 export class SignupStats {
   totalSignups:number;
   recentSignups:number;
@@ -52,6 +57,13 @@ export class UserInquiry {
   email: string;
   subject: string;
   message: string;
+}
+
+export class UserQuery {
+  name: string;
+  email: string;
+  page: string;
+  numRecords: string;
 }
 
 @Injectable({
