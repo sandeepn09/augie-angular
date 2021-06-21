@@ -161,6 +161,7 @@ import { OveviewComponent } from './admin/oveview/oveview.component';
 import { SettingComponent } from './admin/setting/setting.component';
 import { AddSettingComponent } from './admin/add-setting/add-setting.component';
 import { ContactUsComponent } from './core/components/contact-us/contact-us.component';
+import { AugiePrivacyPolicyComponent } from './core/components/augie-privacy-policy/augie-privacy-policy.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -305,7 +306,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     OveviewComponent,
     SettingComponent,
     AddSettingComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    AugiePrivacyPolicyComponent
   ],
   imports: [
     BrowserModule,

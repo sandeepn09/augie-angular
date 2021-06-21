@@ -127,6 +127,7 @@ import { SignupsComponent } from "./admin/signups/signups.component";
 import { AdminPageComponent } from "./admin/admin-page/admin-page.component";
 import { AddSettingComponent } from "./admin/add-setting/add-setting.component";
 import { ContactUsComponent } from './core/components/contact-us/contact-us.component';
+import { AugiePrivacyPolicyComponent } from "./core/components/augie-privacy-policy/augie-privacy-policy.component";
 
 const routes: Routes = [
   {
@@ -151,6 +152,7 @@ const routes: Routes = [
       { path: "helpcenter-faqs", component: HelpcenterFaqsComponent },
       { path: "helpcenter-guides", component: HelpcenterGuidesComponent },
       { path: "helpcenter-overview", component: HelpcenterOverviewComponent },
+      { path: "privacy-policy", component: AugiePrivacyPolicyComponent },
       {
         path: "helpcenter-support-request",
         component: HelpcenterSupportRequestComponent,
